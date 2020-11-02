@@ -4,7 +4,7 @@ import numpy as np
 import tensorflow as tf
 import argparse
 
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image
 
 from object_detection.utils import visualization_utils as viz_utils
 
@@ -52,10 +52,6 @@ def eval_images(model_dir, samples_dir, dest_dir):
 
 
 def main():
-    model_dir = '/home/randolfo/models/export/onebox/2e05_rcnn101_lrw100_sc2_4000/saved_model'
-    dest_dir = '/home/randolfo/images/onebox/eval/eval_2e05_rcnn101_lrw100_sc2_4000'
-    samples_dir = '/home/randolfo/images/onebox/samples/*.jpg'
-
     parser = argparse.ArgumentParser(description='Predict objects on samples')
     parser.add_argument('--model', help='Path to model', type=str)
     parser.add_argument('--samples', help='Path to samples', type=str, default='')

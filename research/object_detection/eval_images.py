@@ -51,6 +51,7 @@ def eval_images(model_dir, samples_dir, dest_dir, out_filename):
             max_boxes_to_draw=200,
             min_score_thresh=0.5,
             agnostic_mode=False,
+            line_thickness=1
         )
 
         file_name = os.path.basename(image_path)

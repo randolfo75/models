@@ -23,7 +23,7 @@ def eval_images(model_dir, samples_dir, dest_dir, out_filename):
     # detect_fn = detection_model.signatures["serving_default"]
     detect_fn = tf.saved_model.load(model_dir)
 
-    image_paths = glob.glob(os.path.join(samples_dir, "*.jpg"))
+    image_paths = glob.glob(samples_dir + '/**/*.jpg', recursive=True)
 
     dict_result = dict()
     dictionary_output = dict()
